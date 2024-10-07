@@ -1,0 +1,89 @@
+* {
+	font-family: JetBrains Mono, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+	font-size: 13px;
+}
+
+window#waybar {
+	background-color: #323232;
+	color: #ffffff;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+	box-shadow: none;
+	text-shadow: none;
+	background: none;
+	transition: none;
+}
+
+#workspaces button {
+	padding: 0 5px;
+	border: none;
+	border-radius: 0px;
+	background-color: transparent;
+	color: #ffffff;
+}
+
+#workspaces button:hover {
+	border-color: transparent;
+}
+
+#workspaces button.focused {
+	background-color: #285577;
+}
+
+#workspaces button.active {
+	background-color: #64727D;
+}
+
+#workspaces button.urgent {
+	background-color: #eb4d4b;
+}
+
+#mode {
+	background-color: #900000;
+	color: #ffffff;
+}
+
+window#waybar.empty #window {
+	background-color: transparent;
+	color: transparent;
+}
+
+window#waybar.empty {
+	background-color: #323232;
+}
+
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#mpd {
+	/* border-left: 2px solid #285577; */
+	padding: 0 10px;
+	color: #ffffff;
+}
+
+#clock {
+	font-weight: bold;
+}
+
+#battery.warning, #cpu.warning, #memory.warning, #temperature.warning {
+	color: orange;
+}
+
+#battery.critical, #cpu.critical, #memory.critical, #temperature.critical {
+	color: red;
+}
