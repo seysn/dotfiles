@@ -1,0 +1,19 @@
+# LazyGit config reference : https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md
+
+# Config relating to the Lazygit UI
+gui:
+  # The number of lines you scroll by when scrolling the main window
+  scrollHeight: 10
+  # If true, allow scrolling past the bottom of the content in the main window
+  scrollPastBottom: false
+  # Nerd fonts version to use.
+  # One of: '2' | '3' | empty string (default)
+  # If empty, do not show icons.
+  nerdFontsVersion: "3"
+
+# Config relating to git
+git:
+  # Config relating to merging
+  merging:
+    # Extra args passed to `git merge`, e.g. --no-ff
+    args: "--no-ff"
