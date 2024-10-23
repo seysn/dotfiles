@@ -1,0 +1,30 @@
+theme = "github_dark"
+
+[editor]
+mouse = false
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.indent-guides]
+render = true
+character = "╎"
+
+[editor.lsp]
+display-inlay-hints = true
+
+[keys.normal]
+# Emacs style shortcuts
+C-a = ["goto_line_start"]
+C-e = ["goto_line_end"]
+C-v = ["half_page_down"]
+A-v = ["half_page_up"]
+
+# VSCode style shortcuts
+A-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+A-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+
+[keys.normal."space"]
+o = "file_picker_in_current_buffer_directory"
