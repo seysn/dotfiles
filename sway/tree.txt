@@ -1,0 +1,4 @@
+/home/seysn/.config/sway/
+└── config
+
+1 directory, 1 file
