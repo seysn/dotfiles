@@ -5,10 +5,14 @@ auto-format = true
 
 [[language]]
 name = "rust"
-formatter = { command = "rustfmt" }
+formatter = { command = "rustfmt", args = ["--edition", "2021"] }
 auto-format = true
 
 [language-server.rust-analyzer.config]
 check.command = "clippy"
 inlayHints.lifetimeElisionHints.enable = "skip_trivial"
 inlayHints.bindingModeHints.enable = true
+
+[language-server.vscode-json-language-server.config]
+json = { validate = { enable = true }, format = { enable = true } }
+# provideFormatter = true

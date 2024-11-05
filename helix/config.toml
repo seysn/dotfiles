@@ -2,6 +2,7 @@ theme = "github_dark"
 
 [editor]
 mouse = false
+rulers = [88]
 
 [editor.cursor-shape]
 insert = "bar"
@@ -15,20 +16,33 @@ character = "╎"
 [editor.lsp]
 display-inlay-hints = true
 
+[editor.whitespace.render]
+newline = "all"
+
+# enable this on next helix version
+# [editor.inline-diagnostics]
+# cursor-line = "hint"
+# other-lines = "error"
+
 [keys.normal]
 a = ["append_mode", "collapse_selection"]
 S-tab = ["jump_backward"]
+# X = ["extend_line_up", "extend_to_line_bounds"]
+X = "extend_line_up"
 
 # Emacs style shortcuts
 C-a = ["goto_line_start"]
 C-e = ["goto_line_end"]
-C-v = ["half_page_down"]
-A-v = ["half_page_up"]
+# C-v = ["half_page_down"]
+# A-v = ["half_page_up"]
 
 # VSCode style shortcuts
 A-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 A-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 
+[keys.select]
+X = "extend_line_up"
+
 [keys.normal.space]
 o = "file_picker_in_current_buffer_directory"
-"=" = [":format"]
+"=" = ":format"
