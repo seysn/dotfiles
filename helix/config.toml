@@ -4,6 +4,8 @@ theme = "github_dark"
 mouse = false
 rulers = [88]
 bufferline = "multiple"
+cursorline = true
+color-modes = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -23,10 +25,9 @@ display-inlay-hints = true
 [editor.whitespace.render]
 newline = "all"
 
-# enable this on next helix version
-# [editor.inline-diagnostics]
-# cursor-line = "hint"
-# other-lines = "error"
+[editor.inline-diagnostics]
+cursor-line = "hint"
+other-lines = "error"
 
 [keys.normal]
 a = ["append_mode", "collapse_selection"]

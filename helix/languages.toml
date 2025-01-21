@@ -1,7 +1,8 @@
 [[language]]
 name = "python"
-formatter = { command = "ruff", args = ["format", "-"] }
+formatter = { command = "bash", args = ["-c", "ruff check --fix - | ruff format -"] }
 auto-format = true
+language-servers = ["pylsp"]
 
 [[language]]
 name = "rust"
@@ -16,3 +17,4 @@ inlayHints.bindingModeHints.enable = true
 [language-server.vscode-json-language-server.config]
 json = { validate = { enable = true }, format = { enable = true } }
 # provideFormatter = true
+
