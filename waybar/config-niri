@@ -1,0 +1,84 @@
+{
+    "position": "bottom",
+    "layer": "top",
+    "modules-left": [
+        "niri/workspaces",
+    ],
+    "modules-center": [],
+    "modules-right": [
+        "network",
+        "temperature",
+        "cpu",
+        "memory",
+        "pulseaudio",
+        "battery",
+        "clock",
+        "tray"
+    ],
+    "niri/workspaces": {},
+    "network": {
+        "interface": "wlp5s0",
+        "format": "{ifname}",
+        "format-wifi": " {essid} ({signalStrength}%)",
+        "format-ethernet": "󰊗 {ipaddr}/{cidr}",
+        "format-disconnected": "",
+        "tooltip-format": "󰊗 {ifname} via {gwaddr}",
+        "tooltip-format-wifi": " {essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": " {ifname}",
+        "tooltip-format-disconnected": "Disconnected",
+        "tooltip": false
+    },
+    "temperature": {
+        "format": " {temperatureC}°C",
+        "tooltip": false
+    },
+    "cpu": {
+        "interval": 10,
+        "format": " {usage}%"
+    },
+    "memory": {
+        "interval": 5,
+        "format": " {used:0.1f}G / {total:0.1f}G",
+        "tooltip": false
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-muted": " {volume}%",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                ""
+            ]
+        },
+        "scroll-step": 1
+    },
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-charging": "⚡ {capacity}%",
+        "format-plugged": "⚡ {capacity}%",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "clock": {
+        "interval": 5,
+        "format": "{:%Y-%m-%d %H:%M:%S}",
+        "tooltip": false,
+    	"timezone": "Europe/Paris"
+    },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 5
+    }
+}
