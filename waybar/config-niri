@@ -3,6 +3,7 @@
     "layer": "top",
     "modules-left": [
         "niri/workspaces",
+        "niri/window",
     ],
     "modules-center": [],
     "modules-right": [
@@ -16,8 +17,13 @@
         "tray"
     ],
     "niri/workspaces": {},
+    "niri/window": {
+        "icon-size": 20,
+        "icon": true,
+        "separate-outputs": true
+    },
     "network": {
-        "interface": "wlp5s0",
+        "interface": "wlp0s20f3",
         "format": "{ifname}",
         "format-wifi": " {essid} ({signalStrength}%)",
         "format-ethernet": "󰊗 {ipaddr}/{cidr}",
@@ -33,7 +39,7 @@
         "tooltip": false
     },
     "cpu": {
-        "interval": 10,
+        "interval": 5,
         "format": " {usage}%"
     },
     "memory": {

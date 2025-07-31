@@ -1,13 +1,30 @@
 [[language]]
 name = "python"
-formatter = { command = "bash", args = ["-c", "ruff check --fix - | ruff format -"] }
+# formatter = { command = "bash", args = ["-c", "ruff check --fix - | ruff format -"] }
+# formatter = { command = "ruff", args = ["check", "--fix", "-"]}
 auto-format = true
-language-servers = ["pylsp"]
+language-servers = ["ty", "ruff"]
 
 [[language]]
 name = "rust"
-formatter = { command = "rustfmt", args = ["--edition", "2021"] }
+formatter = { command = "rustfmt" }
 auto-format = true
+
+[[language]]
+name = "json"
+formatter = { command = "biome", args = ["format", "--use-editorconfig=true", "--stdin-file-path", "buffer.json"] }
+auto-format = true
+# indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "jsonc"
+auto-format = true
+formatter = { command = "biome", args = ["format", "--use-editorconfig=true", "--stdin-file-path", "buffer.jsonc"] }
+# indent = { tab-width = 4, unit = "    " }
+
+[language-server.basedpyright]
+command = "basedpyright-langserver"
+args = ["--stdio"]
 
 [language-server.rust-analyzer.config]
 check.command = "clippy"
@@ -15,6 +32,5 @@ check.command = "clippy"
 inlayHints.bindingModeHints.enable = true
 
 [language-server.vscode-json-language-server.config]
-json = { validate = { enable = true }, format = { enable = true } }
-# provideFormatter = true
-
+json = { validate = { enable = true }, format = { enable = false } }
+# provideFormatter = false

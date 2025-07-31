@@ -2,10 +2,12 @@ theme = "github_dark"
 
 [editor]
 mouse = false
-rulers = [88]
+rulers = [100]
 bufferline = "multiple"
 cursorline = true
 color-modes = true
+auto-pairs = true
+popup-border = "all"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -35,6 +37,7 @@ tab = ":buffer-next"
 S-tab = ":buffer-previous"
 # X = ["extend_line_up", "extend_to_line_bounds"]
 X = "extend_line_up"
+J = "join_selections_space"
 
 # Emacs style shortcuts
 C-a = ["goto_line_start"]
