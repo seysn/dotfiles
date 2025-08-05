@@ -82,6 +82,7 @@
         "format": "{:%Y-%m-%d %H:%M:%S}",
         "tooltip": true,
         "timezone": "Europe/Paris",
+        "locale": "en_GB.UTF-8",
         "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {
             "mode": "year",
